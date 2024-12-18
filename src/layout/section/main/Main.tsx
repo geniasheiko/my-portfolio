@@ -2,28 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import photo from '../../../assets/images/photo.jpg'
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { theme } from '../../../styles/Theme';
+import { Container } from '../../../components/Container';
 
 
 export const Main = () => {
     return (
         <StyledMain>
+            <Container>
             <FlexWrapper align={"center"} justify={"space-around"}>
             <TextBlock>
-                <span>HELLO</span>
+                <h3>HELLO</h3>
                 <h2>I am Evgenia Melnik</h2>
-                <span>I've been doing web design, front-end and back-end development for a year now.
-                 Do you need a website design, site layout, or maybe a turnkey website? Then contact me</span>
+                <p>I've been doing web design, front-end and back-end development for a year now.
+                 Do you need a website design, site layout, or maybe a turnkey website? Then contact me</p>
                 <button>CONTACT ME</button>
             </TextBlock>
 <Photo src={photo} alt="" />
 </FlexWrapper>
+</Container>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.div`
     min-height: 100vh;
-   // background-color: #414141;
+   background-color: ${theme.colors.primyriBg};
 `
 const TextBlock = styled.div`
    

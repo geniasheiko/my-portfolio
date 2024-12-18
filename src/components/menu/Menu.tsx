@@ -1,22 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
-export const Menu = () => {
+
+export const Menu = (props: {menuItems:Array<string>}) => {
     return (
-<StyledMenu>
+<StyledMenu >
                 <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">About me</a>
-                    </li>
-                    <li>
-                        <a href="">Porfolio</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
+                {props.menuItems.map((item, index) => {
+          return<ListItem key={index}>
+            <a href="">
+                <ListSpan>
+                    {item}</ListSpan></a>
+                    
+          </ListItem>
+                })}
                 </ul>
             </StyledMenu>
     );
@@ -25,6 +23,29 @@ export const Menu = () => {
 const StyledMenu = styled.nav`
     ul{
         display: flex;
-        gap: 30px
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
+        `
+const ListItem = styled.a`
+    font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+ font-size: 24px;
+ color: ${theme.colors.font};
+
+ a:hover {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid ${theme.colors.buttonBg};
+ 
+}
+
+
+`
+const ListSpan = styled.span`
+    color: ${theme.colors.font};
+
 `

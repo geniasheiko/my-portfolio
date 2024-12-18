@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import photo from '../../../assets/images/photo.jpg'
+import photo from '../../../assets/images/photo1.jpg'
 import { Photo } from '../../../components/photo/Photo';
 import {Title} from '../../../components/Title'
 
