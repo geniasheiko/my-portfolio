@@ -5,8 +5,8 @@ import { Header } from './layout/header/Header';
 import { Main } from './layout/section/main/Main';
 import { Skills } from './layout/section/skills/Skills';
 import { AboutMe } from './layout/section/aboutMe/AboutMe';
-import { Portfolio } from './layout/section/portfolio/Portfolio';
 import { Footer } from './layout/footer/Footer';
+import { MyWork } from './layout/section/portfolio/MyWork/MyWork';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
     <Main />
     <Skills />
     <AboutMe />
-    <Portfolio />
+    <MyWork />
     <Footer />
     </div>
   );

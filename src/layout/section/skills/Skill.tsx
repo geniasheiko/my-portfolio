@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../components/icon/Icon';
+import { theme } from '../../../styles/Theme';
+import { Container } from '../../../components/Container';
+import { FlexWrapper } from '../../../components/FlexWrapper';
 
 type SkillPropsType = {
     iconId: string;
@@ -11,8 +14,11 @@ type SkillPropsType = {
 export const Skill = (props:SkillPropsType) => {
     return (
    <StyledSkill>
-    <Icon iconId={props.iconId}></Icon>
+    <IconWrapper>
+    <Icon width={"75"} height={"75"} iconId={props.iconId}></Icon>
+    </IconWrapper>
     <SkillTitle>{props.title}</SkillTitle>
+   
    </StyledSkill>
     );
 };
@@ -20,7 +26,25 @@ const StyledSkill = styled.div`
 height: 270px;
 width: 270px;
 border-radius: 29px;
-    background-color: #2A2A2A;
+margin: 20px 10px 20px 10px ;
+    background-color: ${theme.colors.primyriBg};
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
+    display: flex;
+flex-direction: column;
+gap: 30px;
+    justify-content: center;
+    
+    &:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+`
+const IconWrapper = styled.h3`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 const SkillTitle = styled.h3`
   font-size: 24px;

@@ -3,20 +3,19 @@ import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
 
 
-export const Menu = (props: {menuItems:Array<string>}) => {
+export const Menu = (props: { menuItems: Array<string> }) => {
     return (
-<StyledMenu >
-                <ul>
+        <StyledMenu>
+            <ul>
                 {props.menuItems.map((item, index) => {
-          return<ListItem key={index}>
-            <a href="">
-                <ListSpan>
-                    {item}</ListSpan></a>
-                    
-          </ListItem>
+                    return <ListItem key={index}>
+                                <a href="">
+                                    <ListSpan>{item}</ListSpan>
+                                </a>
+                            </ListItem>
                 })}
-                </ul>
-            </StyledMenu>
+            </ul>
+        </StyledMenu>
     );
 };
 
@@ -28,24 +27,19 @@ const StyledMenu = styled.nav`
         padding: 0;
         margin: 0;
     }
-        `
-const ListItem = styled.a`
+`
+const ListItem = styled.li`
     font-family: 'Josefin Sans', sans-serif;
-        font-weight: 400;
- font-size: 24px;
- color: ${theme.colors.font};
-
- a:hover {
-  content: '';
-  display: block;
-  width: 100%;
-  border-bottom: 2px solid ${theme.colors.buttonBg};
- 
-}
-
-
+    font-weight: 400;
+    font-size: 24px;
+    color: ${theme.colors.font};
+    a:hover {
+        content: '';
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid ${theme.colors.buttonBg}; 
+    }
 `
 const ListSpan = styled.span`
     color: ${theme.colors.font};
-
 `
