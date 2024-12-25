@@ -4,6 +4,7 @@ import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { MobileMenu } from './MobileMenu';
 
 const items = ["Home", "About me", "Portfolio", "Contact"]
 
@@ -16,6 +17,7 @@ export const Header = () => {
                         <Logo />
                     </LogoWrapper>
                     <Menu menuItems={items} />
+                    <MobileMenu menuItems={items} />
                 </FlexWrapper>
             </Container>
 

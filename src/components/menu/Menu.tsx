@@ -27,6 +27,9 @@ const StyledMenu = styled.nav`
         padding: 0;
         margin: 0;
     }
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 const ListItem = styled.li`
     font-family: 'Josefin Sans', sans-serif;

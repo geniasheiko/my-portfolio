@@ -8,6 +8,10 @@ export const theme = {
        buttonBg:"#E2A300",
        
        font:"#E4E4E4"
+},
 
-    }
+media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
+}
 }
