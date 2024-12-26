@@ -9,23 +9,19 @@ export const Skills = () => {
     return (
         <StyledSkillWrapper>
             <Container>
-        <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"}>
-           
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-        <Skill iconId={"react"} title={"React"} />
-   
-    </FlexWrapper>
-    </Container>
-    </StyledSkillWrapper>
-       
-
-    );
-};
+                <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"}>
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                    <Skill iconId={"react"} title={"React"} />
+                </FlexWrapper>
+            </Container>
+        </StyledSkillWrapper>
+           );
+        };
 
 const StyledSkillWrapper = styled.section`
     display: flex;

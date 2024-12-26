@@ -32,7 +32,7 @@ const StyledMain = styled.div`
    padding: 100px 0;
    background-color: ${theme.colors.primyriBg};
    @media ${theme.media.tablet} {
-    padding-bottom: 50px;
+    padding-bottom: 0;
    }
 `
 const TextBlock = styled.div`

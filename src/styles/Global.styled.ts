@@ -35,6 +35,14 @@ body {
     cursor: pointer;
   }
 
+section {
+  padding: 100px 0;
+
+  @media ${theme.media.mobile} {
+    padding: 90px 0;
+  }
+}
+
   h3 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
@@ -54,7 +62,4 @@ body {
     font-size: 18px;
     color: ${theme.colors.font};
   }
-
-
-
 `

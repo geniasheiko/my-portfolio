@@ -59,15 +59,24 @@ const AbotMeStyle = styled.section`
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    ${FlexWrapper} {
+        @media ${theme.media.tablet} {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    } 
+    }
 `
 const PhotoDouble = styled.div`
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      position: relative;
-     /* bottom: -10px;*/
      right: -12px; 
      z-index: 1;
+    @media ${theme.media.tablet} {
+        display: none;
+    }
    `
  const Title = styled.h2`
  font-family: 'Josefin Sans', sans-serif;
@@ -76,14 +85,31 @@ const PhotoDouble = styled.div`
  color: ${theme.colors.font};
  position: relative;
  top: -30px;
+ @media ${theme.media.tablet} {
+    font-size: 48px;
+
+ }
  ` 
 const TextBlock = styled.div`
     background-color:#2D2D2D;
     max-width: 400px;
+    width: 100%;
     padding: 0 40px 20px 35px;
     border-radius: 14px;
     text-align: left;
     box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.5);
+    @media ${theme.media.mobile} {
+        width: 100%;
+        padding: 0 10px 35px 0;  
+    }
+     @media ${theme.media.mobile} {
+   width: 100%;
+   padding: 0 0 35px 0;
+
+   ${Text} {
+    font-size: 20px;
+   }
+    } 
 `
 const PhotoSingl = styled.div`
     display: flex;
@@ -91,5 +117,11 @@ const PhotoSingl = styled.div`
     justify-content: center;
     z-index: 1;
     position: relative;
-    
-`
+    ${PhotoWrapper} {
+        @media ${theme.media.tablet} {
+        left: 0;
+        width: 307px;
+        height: 339px;
+    }
+    }
+    `
